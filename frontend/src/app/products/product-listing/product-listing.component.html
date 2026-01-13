@@ -1,0 +1,31 @@
+<div class="product-listing-wrapper">
+    <div class="product-listing">
+        <div class="action-buttons-section">
+            <button class="action-btn btn-outline">
+                <i class="far fa-file-alt"></i>
+                View Catalogue
+            </button>
+            <button class="action-btn btn-outline">
+                <i class="fas fa-download"></i>
+                Download PDF
+            </button>
+            <button class="action-btn btn-primary">
+                View All Products
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <div class="products-grid">
+            <app-product-card
+                *ngFor="let product of products"
+                [productName]="product.name"
+                [description]="product.description"
+                [imageAddress]="product.image">
+            </app-product-card>
+        </div>
+    </div>
+
+    <div class="catalog-download-wrapper">
+        <app-catalog-download></app-catalog-download>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="product-card group">
+    <div class="card-background">
+        <div class="image-section">
+            <div class="image-container">
+                <img [src]="imageAddress" [alt]="productName" loading="lazy" class="product-image" />
+                <div class="image-overlay"></div>
+            </div>
+        </div>
+        <div class="content-section">
+            <div class="text-content">
+                <h3 class="product-name">{{ productName }}</h3>
+                <p class="product-description">{{ description }}</p>
+            </div>
+            <div class="button-group">
+                <button class="btn btn-white">View More</button>
+                <button class="btn btn-indigo">Get Quote</button>
+            </div>
+        </div>
+    </div>
+</div>

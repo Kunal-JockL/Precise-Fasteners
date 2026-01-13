@@ -1,0 +1,103 @@
+<div class="contact-form-wrapper">
+    <div class="contact-form-container">
+        <div class="form-section">
+            <div class="form-card">
+                <h2 class="form-heading">Contact Us</h2>
+                <form (ngSubmit)="onSubmit()" class="form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            class="form-input" 
+                            placeholder="Your name"
+                            [(ngModel)]="formData.name"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="example@yourmail.com"
+                            [(ngModel)]="formData.email"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input 
+                            type="text" 
+                            id="subject" 
+                            name="subject" 
+                            class="form-input" 
+                            placeholder="Title..."
+                            [(ngModel)]="formData.subject"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            class="form-textarea" 
+                            placeholder="Type here ..."
+                            [(ngModel)]="formData.message"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="info-content">
+                <p class="info-description">
+                    With over five decades of experience and ISO-certified operations, Precise
+                    Fasteners Pvt. Ltd. delivers reliable, high-quality industrial fasteners to clients
+                    across India and around the world. Whether you need product information,
+                    pricing, or technical support, our team is always ready to assist you.
+                </p>
+            </div>
+            <div class="contact-cards-grid">
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 class="card-title">Phone Number</h3>
+                    <p class="card-detail">+ 91 22 25000603</p>
+                </div>
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3 class="card-title">Whatsapp</h3>
+                    <p class="card-detail">+ 91 22 25000603</p>
+                </div>
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    <h3 class="card-title">Email Address</h3>
+                    <p class="card-detail">
+                        <span>sales&#64;fastenerindia.com</span>
+                        <span>marketing&#64;fastenerindia.com</span>
+                    </p>
+                </div>
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i class="far fa-map"></i>
+                    </div>
+                    <h3 class="card-title">Our Address</h3>
+                    <p class="card-detail">
+                        B-18A/C-9, Ghatkopar Industrial Estate,<br>
+                        Behind R City Mall, LBS Marg, Ghatkopar<br>
+                        (W), Mumbai – 400 086 (India)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

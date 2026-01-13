@@ -1,0 +1,124 @@
+@use '../../../../styles/variables';
+
+.review-card {
+    position: relative;
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 2px 3px 4px 4px rgba(0, 0, 0, 0.15);
+    padding: 21px 32px;
+    width: 394px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.quote-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 109px;
+    height: 109px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg);
+    pointer-events: none;
+    
+    svg {
+        width: 100%;
+        height: 100%;
+        color: var(--slate900);
+        opacity: 0.1;
+    }
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.company-logo {
+    height: 35px;
+    width: 247px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+.review-text {
+    width: 100%;
+    max-width: 323px;
+    
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: var(--slate600);
+        text-align: center;
+        margin: 0;
+    }
+}
+
+.person-info {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    width: 100%;
+    max-width: 323px;
+}
+
+.person-image {
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.person-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.person-name {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--slate900);
+    margin: 0;
+}
+
+.person-position {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--slate500);
+    margin: 0;
+    white-space: nowrap;
+}
+

@@ -1,0 +1,65 @@
+@use '../../../styles/variables';
+
+.stats-section {
+    background-color: var(--slate900);
+    width: 100%;
+    padding: 64px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.stats-container {
+    max-width: 1284px;
+    width: 100%;
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    width: 272px;
+    flex-shrink: 0;
+}
+
+.stat-number {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -1.2px;
+    color: var(--indigo400);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.stat-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.stat-main {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--slate400);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.stat-sub {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--slate500);
+    margin: 0;
+    white-space: nowrap;
+}
+

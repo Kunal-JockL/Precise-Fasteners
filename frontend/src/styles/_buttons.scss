@@ -1,0 +1,31 @@
+@use './variables';
+
+.btn {
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-indigo {
+    background-color: var(--indigo600);
+    color: var(--white);
+}
+
+.btn-indigo:hover {
+    background-color: var(--indigo700);
+}
+
+.btn-white {
+    background-color: var(--white);
+    color: var(--slate600);
+    border: 1px solid var(--slate200);
+}
+
+.btn-white:hover {
+    background-color: var(--slate50);
+    border: 1px solid var(--slate300);
+}

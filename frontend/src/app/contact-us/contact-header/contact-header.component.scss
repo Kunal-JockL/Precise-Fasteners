@@ -1,0 +1,85 @@
+@use '../../../styles/variables';
+
+.header-section {
+    position: relative;
+    width: 100%;
+    background-color: var(--white);
+    background-image: radial-gradient(circle, var(--slate200) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 96px 24px 49px;
+    max-width: 1284px;
+    margin: 0 auto;
+    min-height: 200px;
+}
+
+.container {
+    position: relative;
+    max-width: 768px;
+    width: 100%;
+    z-index: 1;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.heading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.heading {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -1.2px;
+    color: var(--slate900);
+    margin: 0;
+}
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.description {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--slate500);
+    margin: 0;
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+    .header-section {
+        padding: 64px 24px 32px;
+        min-height: 300px;
+    }
+
+    .heading {
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -0.9px;
+    }
+
+    .description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}

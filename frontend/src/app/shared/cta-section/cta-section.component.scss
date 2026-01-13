@@ -1,0 +1,120 @@
+@use '../../../styles/variables';
+
+.cta-section {
+    background-color: #020617;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    padding: 81px 192px 80px;
+    border-radius: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.blur-overlay {
+    position: absolute;
+    background-color: rgba(49, 46, 129, 0.2);
+    filter: blur(50px);
+    right: 0;
+    top: 0;
+    border-radius: 9999px;
+    width: 500px;
+    height: 500px;
+}
+
+.cta-container {
+    max-width: 896px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    padding: 0 24px;
+    width: 100%;
+}
+
+.cta-heading {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: var(--white);
+    letter-spacing: -1.2px;
+    margin: 0;
+    max-width: 784.41px;
+}
+
+.cta-description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: var(--slate400);
+    margin: 0;
+    max-width: 672px;
+    height: 56px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0 0 0;
+    width: 100%;
+}
+
+.btn {
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 32px;
+    
+    span {
+        white-space: nowrap;
+    }
+    
+    svg {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+    }
+}
+
+.btn-primary {
+    background-color: var(--indigo600);
+    color: var(--white);
+    box-shadow: 0px 4px 6px -1px rgba(199, 210, 254, 1), 0px 2px 4px -2px rgba(199, 210, 254, 1);
+    
+    &:hover {
+        background-color: var(--indigo700);
+    }
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--slate900);
+    padding: 13px 33px;
+    
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+        border-color: var(--slate400);
+    }
+}
+

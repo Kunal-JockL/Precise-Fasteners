@@ -1,0 +1,19 @@
+<section class="company-gallery-section">
+    <div class="gallery-container">
+        <div class="header-content">
+            <h2 class="section-heading">Built to Hold Everything Together</h2>
+            <p class="section-description">
+                From precision manufacturing to real-world applications, our fasteners power industries that demand strength, reliability, and scale.
+            </p>
+        </div>
+        
+        <div class="gallery-grid">
+            <div 
+                *ngFor="let image of galleryImages; let i = index" 
+                class="gallery-item"
+                [ngClass]="'item-' + (i + 1)">
+                <img [src]="image.src" [alt]="image.alt" loading="lazy" />
+            </div>
+        </div>
+    </div>
+</section>

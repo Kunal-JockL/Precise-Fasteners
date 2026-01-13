@@ -1,0 +1,255 @@
+@use '../../styles/variables';
+@use '../../styles/buttons';
+
+.catalog-download-wrapper {
+    width: 100%;
+    position: relative;
+    padding: 50px 0px 100px 0px;
+}
+
+.catalog-download-content {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 48px;
+    padding: 32px;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--slate900);
+    border-radius: 20px;
+
+    @media (min-width: 768px) {
+        padding: 48px;
+    }
+
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        gap: 80px;
+        padding: 60px 80px;
+    }
+}
+
+.content-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+
+    @media (min-width: 1024px) {
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+.heading {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    color: var(--white);
+    margin: 0 0 24px 0;
+
+    @media (min-width: 768px) {
+        font-size: 48px;
+    }
+}
+
+.description {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--slate400);
+    margin: 0 0 40px 0;
+    max-width: 576px;
+
+    @media (min-width: 1024px) {
+        margin-bottom: 40px;
+    }
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+
+    @media (min-width: 640px) {
+        flex-direction: row;
+        width: auto;
+    }
+}
+
+.btn {
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 32px;
+    font-weight: 500;
+    font-size: 16px;
+    gap: 8px;
+    font-family: "Inter", sans-serif;
+}
+
+.btn-indigo {
+    background-color: var(--indigo600);
+    color: var(--white);
+    box-shadow: 0px 2px 4px rgba(199, 210, 254, 0.5), 0px 4px 6px rgba(199, 210, 254, 0.3);
+    width: 100%;
+
+    @media (min-width: 640px) {
+        width: auto;
+    }
+
+    &:hover {
+        background-color: var(--indigo700);
+    }
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--slate600);
+    width: 100%;
+
+    @media (min-width: 640px) {
+        width: auto;
+    }
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+}
+
+.arrow-icon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.btn-indigo:hover .arrow-icon {
+    transform: translateX(2px);
+}
+
+.brochure-section {
+    width: 100%;
+    max-width: 340px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 1024px) {
+        max-width: 400px;
+        justify-content: flex-end;
+    }
+}
+
+.brochure-card {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    width: 100%;
+    border-radius: 8px;
+    background: linear-gradient(to bottom right, #1e293b, #0f172a);
+    border: 1px solid rgba(51, 65, 85, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.brochure-image-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: url("https://images.unsplash.com/photo-1586079986518-a6d10c4c4493?auto=format&fit=crop&q=80&w=800");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    mix-blend-mode: overlay;
+}
+
+.brochure-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #020617 0%, transparent 50%, transparent 100%);
+    opacity: 0.9;
+}
+
+.brochure-content {
+    position: relative;
+    height: 100%;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.brochure-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    background-color: var(--indigo600);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.logo-text {
+    color: var(--white);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.brochure-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.brochure-accent {
+    width: 48px;
+    height: 4px;
+    background-color: var(--indigo400);
+    margin-bottom: 16px;
+}
+
+.brochure-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0 0 8px 0;
+}
+
+.brochure-subtitle {
+    font-size: 14px;
+    color: var(--slate400);
+    margin: 0;
+}
+
+.brochure-shine {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: translateX(-100%);
+    transition: transform 1s ease;
+}
+
+.brochure-card:hover .brochure-shine {
+    transform: translateX(100%);
+}

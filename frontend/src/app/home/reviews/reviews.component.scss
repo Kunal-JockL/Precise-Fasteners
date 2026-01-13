@@ -1,0 +1,57 @@
+@use '../../../styles/variables';
+
+.reviews-section {
+    background-color: var(--slate50);
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.reviews-container {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.reviews-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 24px;
+}
+
+.section-heading {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -0.75px;
+    color: var(--slate900);
+    margin: 0;
+}
+
+.section-subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--slate500);
+    margin: 0;
+    max-width: 672px;
+}
+
+.reviews-grid {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    padding: 0 24px;
+    flex-wrap: nowrap;
+}
+

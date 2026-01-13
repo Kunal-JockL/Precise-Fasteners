@@ -1,0 +1,145 @@
+@use '../../../styles/variables';
+
+.featured-products-section {
+    background-color: var(--white);
+    border-top: 1px solid var(--slate200);
+    border-bottom: 1px solid var(--slate200);
+    padding: 96px 0;
+}
+
+.products-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.section-heading {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    color: var(--slate900);
+    margin: 0;
+
+    @media (min-width: 768px) {
+        font-size: 36px;
+    }
+}
+
+.section-description {
+    color: var(--slate500);
+    font-size: 16px;
+    margin: 0;
+}
+
+.header-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Inter", sans-serif;
+
+    i {
+        font-size: 16px;
+    }
+}
+
+.btn-outline {
+    background-color: var(--white);
+    border: 1px solid var(--slate200);
+    color: var(--slate600);
+
+    i {
+        color: var(--slate500);
+    }
+
+    &:hover {
+        background-color: var(--slate50);
+        border-color: var(--slate300);
+
+        i {
+            color: var(--slate600);
+        }
+    }
+}
+
+.btn-primary {
+    background-color: var(--slate900);
+    color: var(--white);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+    &:hover {
+        background-color: #1e293b;
+    }
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    justify-items: center;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+    .featured-products-section {
+        padding: 64px 0;
+    }
+
+    .products-container {
+        padding: 0 16px;
+    }
+
+    .section-heading {
+        font-size: 24px;
+    }
+
+    .header-actions {
+        width: 100%;
+
+        .action-btn {
+            flex: 1;
+            min-width: 120px;
+        }
+    }
+}

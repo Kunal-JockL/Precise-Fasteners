@@ -1,0 +1,14 @@
+<div class="industries-grid">
+    <div 
+        *ngFor="let industry of industries" 
+        class="industry-card"
+        [style.grid-row]="industry.gridRow"
+        [style.grid-column]="industry.gridColumn">
+        <img [src]="industry.image" [alt]="industry.title" class="industry-image" />
+        <div class="gradient-overlay"></div>
+        <div class="industry-content">
+            <h3 class="industry-title">{{ industry.title }}</h3>
+            <p class="industry-description">{{ industry.description }}</p>
+        </div>
+    </div>
+</div>
